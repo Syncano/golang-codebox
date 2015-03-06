@@ -1,10 +1,10 @@
 package main
 
 import "encoding/json"
-import "fmt"
 
 // YOUR CUSTOM CODEBOX CODE AREA
 
+import "fmt"
 // you can define your functions here
 
 // don't forget to include main function
