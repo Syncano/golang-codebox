@@ -21,9 +21,11 @@ func main() {
 
 // helper that will parse codebox config and args for you
 
-var ARGS = unmarshallJSON([]byte(`{"this":"That", "other":42}`))
-var META = unmarshallJSON([]byte(`{"executed_by": "webhook", "executor": "webhook_slug"}`))
-var CONFIG = unmarshallJSON([]byte(`{"apiKey":"xxxxxxxx", "concurrency":4}`))
+var (
+        ARGS = unmarshallJSON([]byte(`{"this":"That", "other":42}`))
+        META = unmarshallJSON([]byte(`{"executed_by": "webhook", "executor": "webhook_slug"}`))
+        CONFIG = unmarshallJSON([]byte(`{"apiKey":"xxxxxxxx", "concurrency":4}`))
+)
 
 func unmarshallJSON(dataRaw []byte) map[string]interface{} {
     var data map[string]interface{}
