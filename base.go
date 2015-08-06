@@ -28,7 +28,7 @@ var (
 )
 
 func unmarshallJSON(dataRaw []byte) map[string]interface{} {
-    var data map[string]interface{}
-    json.Unmarshal(dataRaw, &data)
-    return data
+        var data map[string]interface{}
+        json.Unmarshal(dataRaw, &data)
+        return data
 }
