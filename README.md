@@ -1,23 +1,22 @@
 # golang-codebox
 
-Codebox runtime for Go language.
+This repository contains Dockerfile for Golang 1.4.3 image.
 
-You can build an image yourself
+You can build the image yourself:
 
 ```
 $ docker build -t quay.io/syncano/golang-codebox .
 ```
 
-Or pull it from our registry
+or pull it from Docker registry:
 
 ```
 $ docker pull quay.io/syncano/golang-codebox
 ```
 
-And then check it on the demo:
+Then you can run Golang code inside Docker container:
 
 ```
 $ docker run -it -v `pwd`/demo.go:/tmp/source.go \
     quay.io/syncano/golang-codebox go run /tmp/source.go
 ```
-
