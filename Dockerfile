@@ -22,5 +22,5 @@ RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" \
     && chmod -R 777 "$GOPATH"
 
 RUN chmod 1777 /tmp
-RUN groupadd -r syncano && useradd -r -g syncano syncano
+RUN useradd syncano -d /tmp -s /bin/bash
 USER syncano
