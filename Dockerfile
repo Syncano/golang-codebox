@@ -32,3 +32,4 @@ RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" \
     && chmod -R 777 "$GOPATH"
 
 USER syncano
+WORKDIR /tmp
