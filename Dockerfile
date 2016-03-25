@@ -11,7 +11,7 @@ RUN groupadd -r syncano && \
 
 # enable everyone to use /tmp
 RUN chmod 1777 /tmp
-# -- CUT --
+# -- CUT BEGIN --
 
 ENV GOLANG_VERSION 1.4.3
 ENV GOLANG_DOWNLOAD_URL https://golang.org/dl/go$GOLANG_VERSION.src.tar.gz
@@ -33,5 +33,6 @@ RUN curl -fsL "$GOLANG_DOWNLOAD_URL" -o golang.tar.gz \
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" \
     && chmod -R 777 "$GOPATH"
 
+# -- CUT END --
 USER syncano
 WORKDIR /tmp
