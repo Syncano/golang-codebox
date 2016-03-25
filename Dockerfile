@@ -1,7 +1,7 @@
 FROM ubuntu:trusty
 MAINTAINER "Syncano DevOps Team" <devops@syncano.com>
 
-ENV LAST_REFRESHED 2016-03-22
+ENV LAST_REFRESHED 2016-03-25
 ENV SYNCANO_APIROOT https://api.syncano.io/
 
 RUN groupadd -r syncano && \
@@ -9,8 +9,10 @@ RUN groupadd -r syncano && \
     mkdir /home/syncano && \
     chown -R syncano /home/syncano
 
+# enable everyone to use /tmp
 RUN chmod 1777 /tmp
-#
+# -- CUT --
+
 ENV GOLANG_VERSION 1.4.3
 ENV GOLANG_DOWNLOAD_URL https://golang.org/dl/go$GOLANG_VERSION.src.tar.gz
 ENV GOLANG_DOWNLOAD_SHA1 486db10dc571a55c8d795365070f66d343458c48
