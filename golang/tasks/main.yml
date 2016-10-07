@@ -1,0 +1,18 @@
+---
+- include: common.yml
+
+- name: Copy files
+  copy:
+    src: "{{ item.src }}"
+    dest: /tmp/
+    mode: "{{ item.mode }}"
+  with_items:
+    - src: install_golang.sh
+      mode: "0755"
+
+- name: Run Golang install script
+  shell:
+    ./install_golang.sh
+  args:
+    chdir: /tmp
+    executable: /bin/bash

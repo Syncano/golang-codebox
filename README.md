@@ -5,7 +5,7 @@ This repository contains Dockerfile for Golang 1.4.3 image.
 You can build the image yourself:
 
 ```
-$ docker build -t quay.io/syncano/golang-codebox .
+$ ./create_golang_image.sh
 ```
 
 or pull it from Docker registry:
